@@ -1,0 +1,41 @@
+.header{
+    margin-bottom: 110px;
+    margin-top: 10px;
+    background: crimson;
+    height: 70px;
+}
+#nav{
+    padding: 5px;
+}
+.na{
+    color: black;
+    text-decoration: none;
+}
+.na:hover {
+  color: darkorange;
+}
+
+.na:active {
+  color: white;
+}
+.change_inf{
+    color: #424141;
+    font-size: 40px;
+    text-decoration: none;
+    padding: 10px;
+    padding-bottom: 5px;
+}
+.change_inf:hover {
+  color: black;
+}
+.sub{
+    background-color: white;
+    color: #424141;
+    border: 5px solid #da7185;
+    font-size: 40px;
+    border-radius: 30px;
+}
+.sub:hover{
+    border-color: crimson;
+}
+

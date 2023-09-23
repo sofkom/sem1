@@ -1,0 +1,27 @@
+{% extends 'header.html' %}
+
+{% block title %}
+New entry
+{% endblock %}
+
+{% block content %}
+<div class="container">
+        <div class="body row justify-content-center gy-3">
+            <div class="col-6" style="text-align: center">
+                <p style="font-size: 35px">Данные профиля</p>
+                <br>
+                <form action="" method="post" enctype="multipart/form-data" >
+                    {{ form.hidden_tag() }}
+                    <p style="font-size: 20px">{{ form.text.label() }} </p>
+                    <p style="font-size: 28px">{{ form.text() }}</p>
+                    <p style="font-size: 20px">{{ form.photos.label() }} </p>
+                    <p style="font-size: 28px">{{ form.photos() }}</p>
+
+                    <br>
+                    <p style="font-size: 30px">{{ form.submit() }}</p>
+                    <br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

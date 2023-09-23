@@ -1,0 +1,38 @@
+{% extends 'header.html' %}
+
+{% block title %}
+Change profile
+{% endblock %}
+
+{% block content %}
+<div class="container">
+        <div class="body row justify-content-center gy-3">
+            <div class="col-6" style="text-align: center">
+                <p style="font-size: 35px">Данные профиля</p>
+                <br>
+                <form action="" method="post">
+                    {{ form.hidden_tag() }}
+                    {% for field, errors in form.errors.items() %}
+                        <p style="font-size: 30px; color: crimson">
+                            {{ ', '.join(errors) }}
+                        </p>
+                    {% endfor %}
+                    <p style="font-size: 20px">{{ form.name.label() }} </p>
+                    <p style="font-size: 28px">{{ form.name(value = user['name']) }}</p>
+                    <p style="font-size: 20px">{{ form.email.label() }}</p>
+                    <p style="font-size: 28px">{{ form.email(value = user['email']) }}</p>
+                    <p style="font-size: 20px">{{ form.about.label() }} </p>
+                    <p style="font-size: 28px">{{ form.about(value = user['about']) }}</p>
+                    <p style="font-size: 20px">{{ form.photo.label() }} </p>
+                    <p style="font-size: 28px">{{ form.photo(value = user['photo']) }}</p>
+{#                    <p><a href="{{ url_for('change_psw', id = user['id']) }}">Изменить пароль?</a></p>#}
+                    <br>
+                    <p style="font-size: 30px">{{ form.submit() }}</p>
+                    <br>
+                    <p><a href="{{ url_for('delete_prof', id = user['id']) }}">Удалить страницу?</a></p>
+                <br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
